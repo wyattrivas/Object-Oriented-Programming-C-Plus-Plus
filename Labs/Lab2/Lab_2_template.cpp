@@ -5,7 +5,10 @@
  * {9/19/2023}
  * 
  * {Description of lab AKA paraphrase "abstract" section from lab}
- * 
+ * For this lab we will learn to organize code into functions. 
+ * We will apply function prototypes that will return different data types and objects or those that are void.
+ * We will also be implementing a mix of pass by value and pass by reference calls. 
+ * Lastly, we will be introduced to GitHub and version control.
  * {Describe 1) what was most challenging and 2) how you solved/overcame the problem OR
  * the directions of how you PLAN to solve it}
  * 
