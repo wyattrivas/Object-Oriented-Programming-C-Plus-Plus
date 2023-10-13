@@ -1,11 +1,14 @@
 /***
  * CSE 2010 Fall 2023
- * Lab #{n}
- * {Student Name} #{Coyote ID}
- * {Date}
+ * Lab #3
+ * Wyatt Rivas #008181609
+ * 10/13/2023
  *
  * {Description of lab AKA paraphrase "abstract" section from lab}
- *
+ * For this lab we will create our own class object. 
+ * We will have to creat a class interface within a header file, implement member functions within a .cpp file, and test our class within a main file.
+ * We will learen about private variables and ways to manipulate them using mutator function and access them via accessor functions with respect to scope.
+ * We will also learn to link our files together.
  * {Describe 1) what was most challenging and 2) how you solved/overcame the problem OR
  * the directions of how you PLAN to solve it}
  *
