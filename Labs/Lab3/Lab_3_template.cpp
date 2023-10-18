@@ -6,12 +6,12 @@
  *
  * {Description of lab AKA paraphrase "abstract" section from lab}
  * For this lab we will create our own class object. 
- * We will have to creat a class interface within a header file, implement member functions within a .cpp file, and test our class within a main file.
- * We will learen about private variables and ways to manipulate them using mutator function and access them via accessor functions with respect to scope.
+ * We will have to create a class interface within a header file, implement member functions within a .cpp file, and test our class within a main file.
+ * We will learn about private variables and ways to manipulate them using mutator function and access them via accessor functions with respect to scope.
  * We will also learn to link our files together.
  * {Describe 1) what was most challenging and 2) how you solved/overcame the problem OR
  * the directions of how you PLAN to solve it}
- *
+ * The most challenging part of this lab for me was figuring out how to call the functions in the main file that we are using.
 ***/
 
 #include <iostream>
@@ -47,7 +47,7 @@ int main()
     
     cout << "Testing Age\n";
     cout << bob.getAge() << endl;
-    bob.updateAge(101);
+    bob.updateAge(107);
     cout << bob.getAge() << endl;
 
     cout << "Testing Occupation\n";
@@ -59,9 +59,14 @@ int main()
     cout << bob.getLivesInIE() << endl;
     bob.movedLocation();
     cout << bob.getLivesInIE() << endl;
+    bob.movedLocation();
+    cout << bob.getLivesInIE() << endl;
 
     cout << "Testing isOlderThan\n";
     cout << bob.getName() << ':' << bob.getAge() << endl;
-    
+    unknown.updateAge(12);
+    unknown.updateName("John");
+    cout << unknown.getName() << ':' << unknown.getAge() << endl;
+    cout << bob.isOlderThan(unknown) << endl; 
 }
 

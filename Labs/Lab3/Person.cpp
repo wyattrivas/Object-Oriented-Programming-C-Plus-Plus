@@ -161,9 +161,11 @@ bool Person::getLivesInIE() const
  */
 bool Person::isOlderThan(Person b) const
 {
-    if (age > b.getAge()){
+    if (age > b.getAge())
+    {
         return true;
-    } else {
+    } else 
+    {
         return false;
     }
 }
