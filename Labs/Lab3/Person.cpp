@@ -17,7 +17,7 @@
  * 
  *  For example, void Person::updateName(...).
  * 
- *  Not the only some part of moveLocation() and isOlderThan() are included. This was
+ *  Note that only some parts of moveLocation() and isOlderThan() are included. This was
  *  so the comments could be neatly placed to explain what they do. 
  *  
  *  Make sure to include comments before the functions similar to Lab 2.
@@ -72,11 +72,31 @@ Person::Person(string name, int age, string occupation, bool lives_in_IE){
 /**
  * @brief changes the name into new_name
  * 
- * @param new_name 
+ * @param new_name (string)
  */
 void Person::updateName(string new_name)
 {
     name = new_name;
+}
+
+/**
+ * @brief changes age into new_age
+ * 
+ * @param new_age (int)
+ */
+void Person::updateAge(int new_age)
+{
+    age = new_age; 
+}
+
+/**
+ * @brief changes occupation into new_occupation
+ * 
+ * @param new_occupation (string)
+ */
+void Person::updateOccupation(string new_occupation)
+{
+    occupation = new_occupation; 
 }
 
 /**
@@ -87,9 +107,10 @@ void Person::updateName(string new_name)
  */
 void Person::movedLocation()
 {
-
+    lives_in_IE = !lives_in_IE;
 }
 
+    
 
 /**
  * @brief returns the name of the Person object
@@ -100,7 +121,36 @@ string Person::getName() const{
     return name;
 }
 
+/**
+ * @brief returns the age of the Person object
+ * 
+ * @return int 
+ */
+int Person::getAge() const
+{
+    return age;
+}
 
+/**
+ * @brief returns the occupation of the Person object
+ * 
+ * @return string 
+ */
+string Person::getOccupation() const
+{
+    return occupation;
+}
+
+/**
+ * @brief returns whether or not they live in the IE
+ * 
+ * @return true : live in the IE
+ * @return false : don't live in the IE
+ */
+bool Person::getLivesInIE() const
+{
+    return lives_in_IE; 
+}
 
 /**
  * @brief Compares the age of person b with the implicit Person class.
@@ -111,5 +161,9 @@ string Person::getName() const{
  */
 bool Person::isOlderThan(Person b) const
 {
-    return false; // you should modify this
+    if (age > b.getAge()){
+        return true;
+    } else {
+        return false;
+    }
 }
