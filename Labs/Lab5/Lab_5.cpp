@@ -9,7 +9,8 @@
  * They will monitor computation time and graph any findings. 
  * We will analyze the Big-O time to benchmark their search algorithms.
  * {Describe 1) what was most challenging and 2) how you solved/overcame the problem OR
- * the directions of how you PLAN to solve it}
+ * the directions of how you PLAN to solve it} The most difficult part of this lab was trying to get
+ * my csv files to give me anything other than zeroes.
  *
 ***/
 
@@ -26,7 +27,7 @@ int main()
                                 50000, 100000, 200000, 500000};
         
         for (int i = 0; i < ITER_NUM_SIZES; i++) {
-            arr_n[i] *= 4;
+            arr_n[i] *= 20;
         } 
     // use this to set the range of values to generate to be from 0 to 999 (1000-1)
     int exclusive_range = 1000; 
@@ -69,7 +70,7 @@ int main()
     int arr_n2[BIN_NUM_SIZES]=   {10, 100, 500, 1000, 5000, 10000, 50000, 100000, 200000, \
                             500000, 1000000, 2000000, 5000000, 10000000, 100000000, 500000000};
         for (int i = 0; i < BIN_NUM_SIZES; i++) {
-            arr_n2[i] *= 4;
+            arr_n2[i] *= 20;
         } 
     // create vector of runs for binarySearch
     vector<double>bin_run;
