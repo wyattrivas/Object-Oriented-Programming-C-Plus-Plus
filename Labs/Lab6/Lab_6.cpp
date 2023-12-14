@@ -9,12 +9,14 @@
  * We will be learning how to apply virtual and overloaded functions in order to practice polymorphism. 
  * Lastly, we will create UML diagrams to connect classes and visualize their member functions and variables.
  * {Describe 1) what was most challenging and 2) how you solved/overcame the problem OR
- * the directions of how you PLAN to solve it}
+ * the directions of how you PLAN to solve it} 
+ * The most challenging part of this lab for me was trying to understand everything from the comprehension questions.
  *
 ***/
 
 #include <iostream>
 #include "Charmander.h"
+#include "Pikachu.h"
 using namespace std;
 
 int main()
@@ -26,9 +28,20 @@ int main()
     cout << "-------Constructor Created---------\n";
     Charmander charlie = Charmander("Charlie", 100, 4, 4, pokemonType);
 
+    // Pikachu first = Pikachu();
+    vector<string> pokemonTypes;
+    pokemonType.push_back("Electric");
+
+    cout << "-------Constructor Created---------\n";
+    Pikachu pika = Pikachu("Pika", 100, 4, 4, pokemonTypes);
+
     // Charmander
     cout << "\n-------Direct Speak---------\n";
     charlie.speak();
+
+    //Pikachu
+    cout << "\n-------Direct Speak---------\n";
+    pika.speak();
     
     // Pokemon pointer to Charmander
     Pokemon * p1 = &charlie ;
@@ -40,8 +53,22 @@ int main()
     cout << "\n------- Speak called from Charmander Pointer---------\n";
     (*c1).speak();
 
+    //Pokemon pointer to Pikachu
+    Pikachu * p2 = &pika ;
+    cout << "\n------- Speak called from Pokemon Pointer---------\n";
+    (*p2).speak();
+
+    // Pikachu pointer to Pikachu
+    Pikachu * p3 = &pika ;
+    cout << "\n------- Speak called from Pikachu Pointer---------\n";
+    (*p3).speak();
+
     // Charmander
     cout << "\n------- Print Stats---------\n";
     charlie.printStats();
+
+    // Pikachu
+    cout << "\n------- Print Stats---------\n";
+    pika.printStats();
 }
 
